@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/assets/css/docs.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="custom.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  </head>
+  <title>PPP | Documentation</title>
+  <body>
+    <wrapper class="d-flex flex-column">
+    <div id="nav-placeholder"></div>
+    <script>
+    $(function(){
+    $("#nav-placeholder").load("/navigationBar.html");
+    });
+    </script>
+    <div class='container'>
+      <h1 id='top'><i class='fa fa-check-square-o'></i> Introduction to the Popgen Pipeline Platform<br /><small>Created 02-27-2018 | Last updated 02-28-2018</small></h1><hr /><p><em>This document provides important context information about PPP.</em></p>
+      <hr />
+      <h4>Contents</h4>
+      <ol>
+        <li>Overview</li>
+        <li>Background</li>
+        <li>Galaxy</li>
+        <li>Research Plan</li>
+        <li>Sustainability</li>
+        <li>Challenges</li>
+        <li>Timeline</li>
+      </ol>
+      <hr />
+      <h2>1. Overview</h2>
+      <h4>Less uncertainty, more productivity.</h4>
+      <p>Investigators working in population genomics face large computational challenges in the course of analyzing their data. The goal of the proposed work is to reduce the bioinformatics overhead in conducting population genomic analyses. We are building a pipeline platform to ease the development and implementation of complex population genomic analysis workflows. This will be a browser-based open-source project that will be hosted on a server at Temple University and available for download and local installation. Users will be able to filter their data, conduct both summary-statistic based analyses and in-depth model-based analyses, visualize results, record and reproduce all steps in the analyses, upload those steps to repositories, and interact with developers and other users of the platform.</p>
+      <h5>Project Aims</h5>
+      <p><strong>AIM 1:</strong> Develop scripts for: (1) genomic data formatting, filtering, and parsing; (2) execution, control; (3) real-time monitoring long-running analyses; and (4) mining and visualization of results.</p>
+      <p><strong>AIM 2:</strong> Incorporate the scripts into a graphical user interface (GUI) as part of the Galaxy Project (www.galaxyproject.org).</p>
+      <p><strong>AIM 3:</strong> Add additional tools for data processing (phasing, imputation), convergence assessment for model-based methods, ABBA-BABA and selection scans, more advanced tools for visualizing results, and mixture model-based analyses of demography and migration.</p>
+      <hr />
+      <h2>2. Background</h2>
+      <p>Population genomics is a field increasingly driven by statistical and computational methodologies. The shift towards computation, as new technologies have opened the door to very large data setsthat demand intensive computation, has revolutionized the field and added the “hats” of “statistician” and “programmer” to the heads of many evolutionary biologists. This kind of transformation is what happens in a progressive growing field of science, and is not, in itself, negative or problematic. The problem is that the growth and diversification of methodologies that are being developed to help investigators ask questions of the data is overwhelming for investigators. Increasingly the diversity of approaches and tools outstrips investigators’ ability to take advantage of them. The burden of this diversity of computational tools is not at all unique to population genomics, However this field has a high rate of introduction of new methods across the spectrum of summary statistic-based and model-based methodologies.</p>
+      <hr />
+      <h2>3. Galaxy</h2>
+      <h4>The PPP tools will be available on galaxyproject.org</h4>
+      <p>The project will develop a set of tools that can be used within the Galaxy Bioinformatics Project (www.galaxyproject.org). Galaxy is a powerful and highly flexible, general bioinformatics platform that is widely used by researchers for biological data workflow management. Galaxy is also an open-source project that is exceptionally feature rich. Some of these features that are most relevant to the proposed work are:</p>
+      <p><ul>
+        <li>Seamless integration of user-developed tools into intuitive GUI’s</li>
+        <li>Easy importation of large genomic data</li>
+        <li>Inclusion and extension of existing tools and pipelines</li>
+        <li>Capabilities to install and run jobs locally, and on cloud-based systems</li>
+        <li>Active online developer and user community via Galaxy Biostars</li>
+        <li>Easy installation, and reproducibility of pipelines across computational platforms</li>
+      </ul></p>
+      <p>The Galaxy Project has been cited by more than 2400 publications, supports more than 60, 000 active users, and 1500 developer contributed tools since its launch.Popular applications of the Galaxy project for genomics include the Osiris pipeline, for phylogenomic analyses and visualizations, and Stacks,for alignment, and building loci from RADSeq data. Galaxy is currently being hosted by more than 70 public servers, and incorporation onto cloud-based services is on the rise.</p>
+      <hr />
+      <h2>4. Research Plan</h2>
+      <p>The project development is divided into three steps:</p>
+      <p><strong>AIM 1</strong> will focus on the development of scripts (in UNIX shell, Python, and R) to connect the separate steps of a typical population genomics project. Python will serve as our central pipeline scripting language.</p>
+      <p>The goal of <strong>AIM 2</strong> is to incorporate PPP tools into the Galaxy Project by building a GUI for all steps of the pipeline A publicly available server instance of PPP will be created and hosted for (a) running population genomic analyses, (b) demonstrating the utility of different pipelines, and (c) to obtain suggestions, and feedback on continued development. This server will be listed among Galaxy’s growing list of public servers, and will provide a unique resource for model-based analyses for population geneticists.</p>
+      <p>Apart from the server, a standalone version of PPP on the Galaxy project will be released for users to implement on their own machines. This will allow users to (a) reproduce PPP’s functionality, (b) preserve confidential/pre-release data integrity, and (c) develop their own pipelines for PPP to be shared with the community.</p>
+      <p><strong>AIM 3</strong> will focus on a second major release of PPP that incorporates additional programs and functionality. Many of the decisions about priorities under AIM 3, in termsof which kinds of functionality to add, and which specific tools to include in the platform, will hinge on what has been learned during AIMS 1 and 2 and from feedback from users.</p>
+      <p>New scripts will be written to expand the visualization options, such as for more kinds of genome-wide scans, and figures of demographic models. Corresponding modules will be added to both the standalone, and public server instances of PPP’s Galaxy GUI</p>
+      <hr />
+      <h2>5. Sustainability</h2>
+      <p>The proposed work will deliver a freely available and publicly hosted pipeline platform, with major releases anticipated in years 2 and 3. Sustainability, after the end of the work proposed here, can be addressed in two ways. First, the PPP can continue to be made available and maintained at low cost. User forums and GitHub hosting, as well as basic maintenance by the PIs and their students, can easily continue for an extended time at very little cost. Second, if the platform comes to be widely used, as is hoped and expected, the project can be sustained by seeking additional grants to support things that are higher cost, such as continued hosting on a Temple University server or on the cloud, and to support continued development.</p>
+      <hr />
+      <h2>6. Challenges</h2>
+      <p>The greatest challenge of the proposed work will be to create an overall design that truly simplifies and improves the processes of pipeline development and data analysis, and does so in the face of a very wide variety of available approaches and tools.</p>
+      <p>An additional challenge arises from the very large size of population genomic data sets. The public instance of PPP that we will be hosting from Temple University will have enough resources for fairly large VCF files and for running most summary statistic-based methods. However we can not host very many computationally intensive model-based methods, that require very long runs or large numbers of processors. Investigators can still run small versions of these analyses and we will provide tools for data sampling and for doing trial runs on small data sets of model-based analyses.</p>
+      <hr />
+      <h2>7. Timeline</h2>
+      <p>The project has been designed to provide two major releases of the PPP, one near the end of year 2 (based on the work in AIM 1 and AIM 2) and a major upgrade near the end of year three (based on the work in AIM 3). To a first approximation it is expected that each AIM will take about one year of the project. The proposed summer workshops in bioinformatics will be also organized in each of the three years of the project.</p><br /><a href='#top'><i class='fa fa-chevron-up'></i> Return to top</a>
+    </div>
+    <main class="container-fluid py-3 flex-fill">
+    </main>
+    <footer class="container-fluid w-100 bg-light text-muted py-3">
+      Popgen Pipeline Platform
+    </footer>
+    </wrapper>
+  </body>
+</html>
