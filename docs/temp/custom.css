@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+body {
+font-family: 'Montserrat', sans-serif;
+}
+
+body, wrapper {
+   min-height:100vh;
+}
+
+.flex-fill {
+   flex:1 1 auto;
+}
+
+
+.red{
+    color:red;
+    }
+.form-area
+{
+    background-color: #FAFAFA;
+	padding: 10px 40px 60px;
+	margin: 10px 0px 60px;
+	border: 1px solid GREY;
+	}
