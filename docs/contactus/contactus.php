@@ -1,11 +1,9 @@
 <?php
-	if(isset($_REQUEST["destination"])){
-		header("Location: {$_REQUEST["destination"]}");
-		}else if(isset($_SERVER["HTTP_REFERER"])){
-		header("Location: {$_SERVER["HTTP_REFERER"]}");
-		}else{
-	/* some fallback, maybe redirect to index.php */
-	}
+	// message that will be displayed when everything is OK :)
+	$okMessage = 'Contact form successfully submitted. Thank you, we will get back to you soon!';
+
+	// If something goes wrong, we will display this message.
+	$errorMessage = 'There was an error while submitting the form. Please try again later';
 
 	$emailfrom = $_POST['email_from'];
 	$name = $_POST['name'];
@@ -24,17 +22,18 @@
 	$mail->Host = "smtp.gmail.com";
 	$mail->Port = 465; // or 587
 	$mail->IsHTML(true);
-	$mail->Username = "niteshsabankar@gmail.com";
-	$mail->Password = "pa55w0rdlogic";
-	$mail->SetFrom("niteshsabankar@gmail.com");
+	$mail->Username = "popgenplatform@gmail.com";
+	$mail->Password = "del1r1um";
+	$mail->SetFrom("popgenplatform@gmail.com");
 	$mail->Subject = $mailSub;
-	$mail->Body = "<b><u>Email Address:</u></b> $emailfrom<br><br><b><u>Name:</u></b> $name<br><br><b><u>Message:</u></b> $mailMsg";
-	$mail->AddAddress("niteshsabankar@gmail.com");
+	$message = nl2br("<b><u>Email Address:</u></b> $emailfrom<br><br><b><u>Name:</u></b> $name<br><br><b><u>Message:</u></b><br>$mailMsg");
+	$mail->Body = $message;
+	$mail->AddAddress("popgenplatform@gmail.com");
 
 	if(!$mail->Send()) {
-	echo "Mailer Error: " . $mail->ErrorInfo;
+	$responseArray = array('type' => 'danger', 'message' => $errorMessage);
 	} else {
-	echo 'Success';
+	$responseArray = array('type' => 'success', 'message' => $okMessage);
 	}
 
 // if requested by AJAX request return JSON response

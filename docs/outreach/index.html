@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   </head>
-  <title>PPP | Team</title>
+  <title>PPP | Outreach</title>
   <body>
     <wrapper class="d-flex flex-column">
     <div id="nav-placeholder"></div>
@@ -19,6 +19,137 @@
     $("#nav-placeholder").load("/navigationBar.html");
     });
     </script>
+    <div class="container">
+      <p class="mt-3">As part of our NSF-ABI's outreach program, we organized a workshop on introducing bioinformatics, genomics, and basics of programming for highschool teachers, in collaboration with TUTeach (<a href="https://cst.temple.edu/tuteach">https://cst.temple.edu/tuteach</a>). The first version of our week-long workshop was successfully launched in Summer 2017, with 8 groups of participants working on collaboratively creating workable lesson plans for their highschool classrooms.</p>
+      <p>Through days 1-4, instructors (Dr. Jody Hey, Dr. Arun Sethuraman, and Dr. Andrew Webb) presented introductory/hands-on material on (1) programming (Python) basics, (2) genomic ancestry, (3) using genomics to inform medicine, and (4) the scope/future of computer programming in biology. All these lessons/material are now available here (organized by days).</p>
+      <hr />
+      <h2 class="mt-3">Day 1: Introduction</h2>
+      <p>On Day 1, Drs. Hey, Sethuraman, and Webb presented material on introducing their own work, Python programming concepts, and allowed time for a hands-on activity for teachers to write a simple Python program that takes in a DNA sequence as input, and outputs the reverse complement of the sequence.</p>
+      <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#day1">Material</button>
+      <div id="day1" class="collapse">
+        <ul>
+          <li>
+            <h5 class="title mt-3"><a href="day1/BioinformaticsWorkshop.pdf">Bioinformatics workshop</a></h5>
+          </li>
+          <li>
+            <h5 class="title"><a href="day1/intro_to_python_JHey.pdf">Introduction to python</a></h5>
+          </li>
+        </ul>
+      </div>
+      <h2 class="mt-4">Day 2: Genomics and Ancestry</h2>
+      <p>On Day 2, Dr. Sethuraman introduced his research in genomic ancestry, methods for estimating ancestry, and went through a hands-on activity for computing genetic ancestry using M&M candies (as placeholders for genes/alleles).</p>
+      <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#day2">Material</button>
+      <div id="day2" class="collapse">
+        <ul>
+          <li>
+            <h5 class="title mt-3"><a href="day2/Ancestry_AS_MondayIntro.pdf">Ancestry</a></h5>
+          </li>
+          <li>
+            <h5 class="title"><a href="day2/MnMactivity.pdf">M&M activity</a></h5>
+          </li>
+        </ul>
+      </div>
+      <h2 class="mt-4">Day 3: Genomic Medicine</h2>
+      <p>Day 3 was Dr. Webb's introduction to the applications of the fields of bioinformatics and genomics to medicine, including studies of Genome-Wide Association (GWAS), and quantitative genetics.</p>
+      <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#day3">Material</button>
+      <div id="day3" class="collapse">
+        <ul>
+          <li>
+            <h5 class="title mt-3"><a href="day3/overview-genomics-disease.pdf">Genomics disease overview</a></h5>
+          </li>
+          <li>
+            <h5 class="title"><a href="day3/genomics-disease_gwas.pdf">Classroom activity on GWAS</a></h5>
+          </li>
+        </ul>
+      </div>
+      <h2 class="mt-4">Day 4: Advanced Python, Future</h2>
+      <p>Day 4, being the last day of instruction, we provided teachers with additional programming resources, as well as helped facilitate a discussion on the future, and scope of incorporating compuational skills in a highschool biology classroom.</p>
+      <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#day4">Material</button>
+      <div id="day4" class="collapse">
+        <ul>
+          <li>
+            <h5 class="title mt-3"><a href="day4/What_is_a_computer_JHey.pdf">Computer basics</a></h5>
+          </li>
+          <li>
+            <h5 class="title"><a href="day4/Some_more_Python_JHey.pdf">Some more python</a></h5>
+          </li>
+        </ul>
+      </div>
+      <h2 class="mt-5">Day 5: Lesson Plans</h2>
+      <p>On Day 5, teachers worked in groups to come up with lesson plans that could potentially be incorporated into their own classrooms, towards the goal of inculcating programming habits in a highschool classroom. 8 groups presented their lesson plans at the end of the day, which can be accessed here.</p>
+      <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#day5">Material</button>
+      <div id="day5" class="collapse">
+        <div class="container mt-5 text-muted">
+          <div class="card-deck">
+            <div class="card">
+              <img src="images/Cancer-pathways.jpg" class="card-img-top img-fluid" alt="Cancer-pathways">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title mt-2">Cancer Pathways</h3>
+                <h5 class="card-subtitle">Taylor Neel and Yusra Nahri</h5>
+                <p class="card-text mt-3"></p>
+                <a href="/docs/outreach/lessons/CancerPathways/" class="btn btn-primary float-right mt-auto">Read more...</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/geneticmapping.jpg" class="img-fluid" alt="geneticmapping">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title mt-2">Gentic Mapping</h3>
+                <h5 class="card-subtitle"> Fatimah and Corinne</h5>
+                <p class="card-text mt-3 "></p>
+                <a href="/docs/outreach/lessons/GeneticMapping/" class="btn btn-primary float-right mt-auto">Read more...</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/psudogenes.jpg" class="img-fluid" alt="psudogenes">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title mt-2">Pseudogenes</h3>
+                <h5 class="card-subtitle">Dana Russell and Johana Uitto</h5>
+                <p class="card-text mt-3"></p>
+                <a href="/docs/outreach/lessons/Pseudogenes/" class="btn btn-primary float-right mt-auto">Read more...</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-deck mt-4">
+            <div class="card">
+              <img src="images/DNAReplication.jpg" class="img-fluid" alt="DNAReplication">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title mt-2">DNA Structure and Replication</h3>
+                <h5 class="card-subtitle">Lisa Franchetti and London Smith</h5>
+                <p class="card-text mt-3"></p>
+                <a href="/docs/outreach/lessons/DNAStructAndRepli/" class="btn btn-primary float-right mt-auto">Read more...</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/Transcription.jpg" class="img-fluid" alt="Transcription">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title mt-2">Transcription</h3>
+                <h5 class="card-subtitle">Lisa Franchetti and London Smith</h5>
+                <p class="card-text mt-3"></p>
+                <a href="/docs/outreach/lessons/Transcription/" class="btn btn-primary float-right mt-auto">Read more...</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/mutattionSmall.jpg" class="img-fluid" alt="mutattion">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title mt-2">Mutations</h3>
+                <h5 class="card-subtitle">Lisa Franchetti and London Smith</h5>
+                <p class="card-text mt-3"></p>
+                <a href="/docs/outreach/lessons/Mutations/" class="btn btn-primary float-right mt-auto">Read more...</a>
+              </div>
+            </div>
+          </div>
+            <div class="card mt-4" style="width: 21.3rem;">
+              <img src="images/Translation.jpg" class="img-fluid" alt="Translation">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title mt-2">Translation</h3>
+                <h5 class="card-subtitle">Lisa Franchetti and London Smith</h5>
+                <p class="card-text mt-3"></p>
+                <a href="/docs/outreach/lessons/Translation/" class="btn btn-primary float-right mt-auto">Read more...</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
     <main class="container-fluid py-3 flex-fill">
     </main>
     <footer class="container-fluid w-100 bg-light text-muted py-3">

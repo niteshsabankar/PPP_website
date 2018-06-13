@@ -7,8 +7,9 @@
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="custom.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <script src="custom.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="validator.js"></script>
+    <script language="JavaScript" type="text/javascript" src="contact.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   </head>
   <title>PPP | Contact Us</title>
@@ -20,13 +21,16 @@
     $("#nav-placeholder").load("/navigationBar.html");
     });
     </script>
-    <div class="container mt-5">
+    <div class="container mt-3">
+      <h3>Let us know how we can help</h3>
       <div class="row">
         <div class="col-md-12">
           <div class="well well-sm">
-            <form class="form-horizontal form-area" action="contactus.php" method="post">
+            <form id="contact-form" class="form-horizontal form-area" action="contactus.php" method="post">
               <fieldset>
                 <legend class="text-center">Contact Us</legend>
+
+                <div class="messages"></div>
                 
                 <!-- Name input-->
                 <div class="form-group">
@@ -55,7 +59,7 @@
                 <div class="form-group">
                   <label class="col-md-3 control-label" for="message">Your message</label>
                   <div class="col-md-12">
-                    <textarea class="form-control" id="mail_msg" name="message" placeholder="Please enter your message here..." rows="5" required="required"></textarea>
+                    <textarea class="form-control" id="mail_msg" name="mail_msg" placeholder="Please enter your message here..." rows="5" required="required"></textarea>
                   </div>
                 </div>
                 
