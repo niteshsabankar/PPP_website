@@ -23,7 +23,7 @@
 	$mail->Port = 465; // or 587
 	$mail->IsHTML(true);
 	$mail->Username = "popgenplatform@gmail.com";
-	$mail->Password = "del1r1um";
+	$mail->Password = "*********";
 	$mail->SetFrom("popgenplatform@gmail.com");
 	$mail->Subject = $mailSub;
 	$message = nl2br("<b><u>Email Address:</u></b> $emailfrom<br><br><b><u>Name:</u></b> $name<br><br><b><u>Message:</u></b><br>$mailMsg");
